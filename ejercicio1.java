@@ -69,3 +69,54 @@ public class MenuConFunciones {
         System.out.println(); // Salto de línea al final
     }
 }
+
+contar vocales
+import java.util.Scanner;
+
+public class ContarVocales {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese una cadena de texto: ");
+        String texto = scanner.nextLine();
+
+        int cantidadVocales = contarVocales(texto);
+        System.out.println("La cadena tiene " + cantidadVocales + " vocales.");
+    }
+
+    // Función para contar vocales
+    public static int contarVocales(String texto) {
+        int contador = 0;
+        texto = texto.toLowerCase();
+
+        for (int i = 0; i < texto.length(); i++) {
+            char c = texto.charAt(i);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                contador++;
+            }
+        }
+        return contador;
+    }
+}
+
+el mayor de 3 números
+
+import java.util.Scanner;
+
+public class MayorDeTres {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el primer número: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = scanner.nextInt();
+        System.out.print("Ingrese el tercer número: ");
+        int num3 = scanner.nextInt();
+
+        System.out.println("El mayor de los tres números es: " + mayor(num1, num2, num3));
+    }
+
+    // Función para encontrar el mayor de tres números
+    public static int mayor(int a, int b, int c) {
+        return Math.max(a, Math.max(b, c));
+    }
+}
